@@ -1,0 +1,14 @@
+* Schematics Netlist *
+
+
+
+I_I1         0 a DC 1A  
+R_R1         0 a  4ohm  
+R_R5         a b  1ohm  
+R_R2         0 V2  1ohm  
+R_R3         0 c  4ohm  
+R_R4         $N_0001 b  2ohm  
+H_H1         V2 a VH_H1 4
+VH_H1        b c 0V
+G_G1         b V2 a b 2
+V_E         $N_0001 0 10V

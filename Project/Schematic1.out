@@ -1,0 +1,143 @@
+
+**** 08/09/19 22:51:46 *********** Evaluation PSpice (Nov 1999) **************
+
+ * E:\SEMESTER ALL\Semester 4 (SUMMER 2019)\CSE209 Circuit\LAB\Project\Schematic1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Fri Aug 09 22:51:42 2019
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+
+**** INCLUDING Schematic1.net ****
+* Schematics Netlist *
+
+
+
+I_I1         0 a DC 1A  
+R_R1         0 a  4ohm  
+R_R5         a b  1ohm  
+R_R2         0 V2  1ohm  
+R_R3         0 c  4ohm  
+R_R4         $N_0001 b  2ohm  
+H_H1         V2 a VH_H1 4
+VH_H1        b c 0V
+G_G1         b V2 a b 2
+V_E         $N_0001 0 10V
+
+**** RESUMING Schematic1.cir ****
+.INC "Schematic1.als"
+
+
+
+**** INCLUDING Schematic1.als ****
+* Schematics Aliases *
+
+.ALIASES
+I_I1            I1(+=0 -=a )
+R_R1            R1(1=0 2=a )
+R_R5            R5(1=a 2=b )
+R_R2            R2(1=0 2=V2 )
+R_R3            R3(1=0 2=c )
+R_R4            R4(1=$N_0001 2=b )
+H_H1            H1(3=V2 4=a )
+VH_H1           H1(1=b 2=c )
+G_G1            G1(3=b 4=V2 1=a 2=b )
+V_E             E(+=$N_0001 -=0 )
+_    _(V2=V2)
+_    _(c=c)
+_    _(a=a)
+_    _(V1=a)
+_    _(d=b)
+_    _(b=b)
+_    _(V3=b)
+.ENDALIASES
+
+
+**** RESUMING Schematic1.cir ****
+.probe
+
+
+.END
+
+**** 08/09/19 22:51:46 *********** Evaluation PSpice (Nov 1999) **************
+
+ * E:\SEMESTER ALL\Semester 4 (SUMMER 2019)\CSE209 Circuit\LAB\Project\Schematic1.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    a)    4.9697  (    b)    -.1212  (    c)    -.1212  (   V2)    4.8485      
+
+($N_0001)   10.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    VH_H1       -3.030E-02
+    V_E         -5.061E+00
+
+    TOTAL POWER DISSIPATION   5.06E+01  WATTS
+
+
+**** 08/09/19 22:51:46 *********** Evaluation PSpice (Nov 1999) **************
+
+ * E:\SEMESTER ALL\Semester 4 (SUMMER 2019)\CSE209 Circuit\LAB\Project\Schematic1.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         G_G1      
+I-SOURCE     1.018E+01
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         H_H1      
+V-SOURCE    -1.212E-01
+I-SOURCE     5.333E+00
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

@@ -1,0 +1,22 @@
+* E:\SEMESTER ALL\Semester 4 (SUMMER 2019)\CSE209 Circuit\LAB\Project\Schematic1.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Fri Aug 09 22:51:42 2019
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+.INC "Schematic1.als"
+
+
+.probe
+
+
+.END
